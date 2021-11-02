@@ -1,0 +1,44 @@
+body {
+    background-color: white;
+
+    font-family: 'Quicksand', sans-serif;
+}
+
+.title {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.card {
+    margin: 20px;
+    padding: 7px;
+    border-radius: 5%;
+}
+
+.calc {
+    padding: 20px;
+    border-radius: 5%;
+
+    background-color: wheat;
+}
+
+.total-price {
+    margin: 20px;
+    padding: 7px;
+}
+
+.window {
+    padding: 20px;
+    border-radius: 30%;
+
+    background-color: white;
+}
+
+.text {
+    text-align: center;
+    font-size: 24px;
+}
+
+p {
+    margin: 0;
+}

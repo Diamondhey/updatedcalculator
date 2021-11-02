@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1 id="title">Calculator</h1>
+    </div>
+
+    <div class="card">
+      <form class="calc">
+        <div>
+          <label for="uname">Bride's name: </label>
+          <br />
+          <input type="text" id="uname" name="name" />
+        </div>
+        <hr />
+
+        <label>Starting Bid:</label>
+        <br />
+        <input type="number" id="startingbid" name="" />
+        <hr />
+
+        <label for="education">Bride's education: </label>
+        <br />
+        <select id="education" onchange="firstCal()">
+          <option value="1" selected disabled>Select</option>
+          <option value="1.5">Undergraduate degree</option>
+          <option value="1.2">College degree</option>
+          <option value="1.05">High school degree</option>
+          <option value="0.9">Middle school degree</option>
+        </select>
+        <hr />
+
+        <label for="family">Bride's family net worth: </label>
+        <br />
+        <select id="family" onchange="secondCal()">
+          <option value="1" selected disabled>Select</option>
+          <option value="2">More than 10,000$</option>
+          <option value="1.5">Between 5,000$ and 10,000$</option>
+          <option value="1.2">Less than 5,000$</option>
+        </select>
+        <hr />
+
+        <label for="caste">Caste: </label>
+        <br />
+        <select id="caste" onchange="thirdCal()">
+          <option value="0" selected disabled>Select</option>
+          <option value="100">Brahmin</option>
+          <option value="50">Kshatriya</option>
+          <option value="20">Vaishya</option>
+          <option value="10">Shudra</option>
+          <option value="-50">Varna</option>
+        </select>
+        <hr />
+
+        <label for="skill">Bride's skills: </label>
+        <br />
+        <input
+          type="checkbox"
+          class="skill"
+          onclick="checkboxCal(this)"
+          value="10"
+        />
+        <label for="skill1">Playing on a musical instrument</label><br />
+        <input
+          type="checkbox"
+          class="skill"
+          onclick="checkboxCal(this)"
+          value="20"
+        />
+        <label for="skill2">Good cook</label><br />
+        <input
+          type="checkbox"
+          class="skill"
+          onclick="checkboxCal(this)"
+          value="15"
+        />
+        <label for="skill3">Easygoing character</label><br />
+        <input
+          type="checkbox"
+          class="skill"
+          onclick="checkboxCal(this)"
+          value="10"
+        />
+        <label for="skill4">Sings well</label>
+        <hr />
+
+        <label for="age">Bride's age: </label>
+        <br />
+        <input
+          type="radio"
+          id="age1"
+          name="age"
+          onchange="getRadioValue()"
+          value="1.5"
+        />
+        <label for="age1">Between 18-23</label><br />
+        <input
+          type="radio"
+          id="age2"
+          name="age"
+          onchange="getRadioValue()"
+          value="1.2"
+        />
+        <label for="age2">Between 24-27</label><br />
+        <input
+          type="radio"
+          id="age3"
+          name="age"
+          onchange="getRadioValue()"
+          value="0.95"
+        />
+        <label for="age3">28+</label>
+        <hr />
+
+        <label for="reputation">Bride's reputation: </label>
+        <br />
+        <input type="checkbox" id="rep1" onclick="lastCal(this)" value="0.85" />
+        <label for="rep1">Gossips about her parent's attitude</label><br />
+        <input type="checkbox" id="rep2" onclick="lastCal(this)" value="0.9" />
+        <label for="rep2">Gossips about her character</label><br />
+        <input type="checkbox" id="rep3" onclick="lastCal(this)" value="-20" />
+        <label for="rep3">General gossips around her person</label>
+        <hr />
+
+        <label for="lletter">Love letter(Maximum length 500 symbols):</label>
+        <br />
+        <textarea
+          id="l_letter"
+          maxlength="500"
+          style="width: 80%"
+          name="text"
+        ></textarea>
+        <hr />
+
+        <input id="button" type="button" value="Calculate" />
+      </form>
+    </div>
+    <hr />
+
+    <div class="total-price">
+      <div id="window" class="window">
+        <p id="number" class="text">Total price: 0$</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
