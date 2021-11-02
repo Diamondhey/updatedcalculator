@@ -1,12 +1,12 @@
-let name;
-let price;
-let loveletter;
-let result;
-let tprice = [];
-let chbx = 0;
-var t_res;
-var skill_counter = [];
-var reputation_counter = [];
+let name; // Filtering and reducer on 105'th and 112'th lines
+let price; // object on 154'th line
+let loveletter; // let there and const on 105'th line
+let result; // conditionals everywhere
+let tprice = []; // logical operators 164'th line
+let chbx = 0; //function composition 105'th line
+var t_res; // ES6 template string (`Like this ${variable}) 172'th line
+var skill_counter = []; // arrow function 112'th line
+var reputation_counter = []; // for loop 98'th line
 var id_counter = ["age1", "age2", "age3"];
 
 document.getElementById("title").innerHTML = "Calculator of bride price"; // <=== DOM manipulations with HTML: 6, 7 and 83 - lines
